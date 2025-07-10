@@ -1,0 +1,18 @@
+.technologyCard {
+    padding: 24px;
+    border-radius: 12px;
+    background: #141414;
+    position: relative;
+    overflow: hidden;
+}
+
+.technologyColor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color_brand_1);
+    pointer-events: none;
+    z-index: 1;
+    // border-radius: 12px;
+}

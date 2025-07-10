@@ -1,0 +1,14 @@
+# Python
+flask-ollama-proxy/.venv/
+ai-resume-front/node_modules/
+
+# Node.js
+hh-ai/node_modules/
+
+# Общие
+*.pyc
+__pycache__/
+
+# JetBrains
+flask-ollama-proxy/.idea/
+hh-ai/.idea/

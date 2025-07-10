@@ -1,0 +1,102 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainWrapper {
+  width: 820px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  // background: linear-gradient(to right, rgb(255, 204, 178), rgb(204, 204, 255));
+  background-color: white;
+  box-shadow: 0px 0px 20px 1px gray;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.headText {
+  font-weight: 600;
+  font-size: 27px;
+  color: black;
+}
+
+.subtitleText {
+  font-weight: 400;
+  font-size: 18px;
+  color: gray;
+}
+
+.inputTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.photoZone {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 18px;
+  align-items: center;
+  justify-items: center;
+  padding-top: 8px;
+
+
+  @media screen and (max-width: 552px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 6px;
+  }
+
+
+  
+}
+
+.gridFields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  gap: 18px;
+}
+
+.expirienceWrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputText {
+  color: gray;
+}
+
+.stepsNext {
+  margin-top: 24px;
+  display: flex;
+  justify-content: end;
+  gap: 6px;
+}
+
+.required {
+  color: red;
+  position: relative;
+  top: -8px;
+  left: 5px;
+}
+
+.nameSurnameZone {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}

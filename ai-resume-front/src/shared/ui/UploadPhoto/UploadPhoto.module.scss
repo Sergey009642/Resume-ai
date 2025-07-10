@@ -1,0 +1,30 @@
+.uploader {
+  transform: scale(1.7);
+}
+
+.photoUploader {
+  .ant-upload-select {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+
+.photoWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border: 1px solid gray;
+  border-radius: 20px;
+  padding: 0px 5px 10px 5px;
+
+  @media screen and (max-width: 552px) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.photo {
+  object-fit: contain;
+}

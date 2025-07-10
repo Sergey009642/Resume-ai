@@ -1,0 +1,21 @@
+#root {
+    /* max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center; */
+    width: 100vw;
+  }
+
+body {
+  margin: 0;
+    --color_bg_1: #292F36;
+    --color_bg_2: #1A1E23;
+    --color_brand_1: #12F7D6;
+    --color_brand_2: #98FAEC;
+    --color_grey: #43454D;
+    --color_white: #FFFFFF;
+    --color_html: #E54F26;
+    --color_css: #0C73B8;
+    --color_js: #E7A020;
+    --color_react: #28A9E0;
+}

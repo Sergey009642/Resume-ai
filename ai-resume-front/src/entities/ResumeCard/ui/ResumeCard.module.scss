@@ -1,0 +1,221 @@
+.fullWidth {
+  width: 100%;
+}
+
+.cardWrapper {
+  // width: 700px;
+  display: flex;
+  min-height: 25px;
+  height: 25px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  flex-direction: column;
+  transition: min-height 0.3s ease-in-out;
+  padding: 19px;
+  align-items: center;
+  gap: 6px;
+}
+
+.collapsedCard {
+  // max-height: 600px;
+  height: fit-content;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: start;
+  height: 25px;
+  transition: justify-content 0.5s ease-in-out;
+}
+
+.collapsedHeader {
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.inputText {
+  color: gray !important;
+  font-size: 16px;
+}
+
+.header.text2 {
+  color: black;
+  font-size: 19px;
+}
+
+.cardContentWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: flex-end;
+}
+
+.cardContentWrapperWork {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.cardContentWrapperSelect {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.textArea {
+  grid-column: span 2;
+}
+
+.textAreaSelect {
+  grid-column: span 3;
+}
+
+.selectInput {
+  grid-column: span 2;
+}
+
+.selectInputSelect {
+  grid-column: span 3;
+}
+
+.Tags {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputsCover {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexInputs {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  align-items: center;
+}
+
+.resumeSpace {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.inputTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.required {
+  color: red;
+  position: relative;
+  top: -8px;
+  left: 5px;
+}
+
+.skillsWrap {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d9d9d9;
+  gap: 12px;
+  width: 100%;
+}
+
+.skillContainer {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  display: flex;
+  // gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.professionalExperienceSkills {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.professionalExperienceSkillData {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tag {
+  height: max-content;
+}
+
+.personalInfoWrapper {
+  width: 100%;
+}
+
+.proffesionalInfoWrapper {
+  width: 100%;
+}
+
+.expirienceGridContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  column-gap: 8px;
+}
+
+.educationInfoWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+
+}
+
+.educationEnum {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+  column-gap: 4px;
+  row-gap: 12px;
+}
+
+.fullRowField {
+  grid-column: span 2;
+}
+
+.scrollArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.addWorkExpirience {
+  width: 100%;
+  margin-top: 12px;
+}
+.addWorkExpirienceButton {
+  width: 100%;
+}
+
+.crossButtonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 20px;
+}

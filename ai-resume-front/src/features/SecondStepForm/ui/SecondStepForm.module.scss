@@ -1,0 +1,148 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mainWrapper {
+    width: 820px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 20px;
+    // background: linear-gradient(to right, rgb(255, 204, 178), rgb(204, 204, 255));
+    background-color: white;
+    box-shadow: 0px 0px 20px 1px gray;
+    max-height: 80vh;
+  }
+  
+  .scrollArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .headText {
+    font-weight: 600;
+    font-size: 27px;
+    color: black;
+  }
+  
+  .subtitleText {
+    font-weight: 400;
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .inputTitleWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 8px;
+  }
+  
+  .photoZone {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    gap: 18px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 8px;
+  }
+  
+  .gridFields {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    gap: 18px;
+  }
+  
+  .expirienceWrapper {
+    align-items: center;
+  }
+  
+  .inputText {
+    color: gray;
+  }
+  
+  .stepsNext {
+    margin-top: 24px;
+    display: flex;
+    justify-content: end;
+    gap: 6px;
+  }
+  
+  .required {
+    color: red;
+    position: relative;
+    top: -8px;
+    left: 5px;
+  
+  }
+
+  .contentWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    // column-gap: 10px;
+    // row-gap: 10px;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-auto-flow: row;
+  }
+
+  .textArea {
+    grid-column: span 2;
+  }
+
+  .addWorkExpirience {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .addWorkExpirienceButton {
+    width: 100%;
+  }
+
+  .crossButtonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 20px;
+  }
+
+  .required {
+    color: red;
+    position: relative;
+    top: -8px;
+    left: 5px;
+  }
+
+  .inputsCover {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .companyFields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .fullWidth {
+    width: 100%;
+  }

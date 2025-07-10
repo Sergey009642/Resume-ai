@@ -1,0 +1,69 @@
+.resumeSelectGrid {
+display: flex;
+flex-wrap: wrap;
+    gap: 16px; /* Отступ между элементами внутри сетки */
+    padding: 20px;
+    height: 100%;
+    background: white;
+    border-radius: 12px; /* Закругленные углы */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1), /* Основная тень */
+        0 1px 3px rgba(0, 0, 0, 0.08); /* Вторичная тень для глубины */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавные эффекты при наведении */
+
+      @media screen and (max-width: 552px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.resumeWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+}
+
+.stepsNext {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+}
+
+.resumeWrap {
+    // border: 1px solid #E0E0E0;
+    height: max-content;
+    width: max-content;
+    border-radius: 12px;
+}
+
+.resumeSelection {
+    border: 2px solid #1677ff;
+}
+
+.resumeSpinLarge {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumePreset {
+    display: flex;
+    flex-direction: column;
+}
+
+.headText {
+  font-weight: 600;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: black !important;
+}

@@ -1,0 +1,144 @@
+.resume {
+    width: 210mm;
+    /* Ширина A4 */
+    height: 297mm;
+    /* Высота A4 */
+    // padding: 20mm;
+    /* Поля внутри документа */
+    background: white;
+    /* Белый фон */
+    // box-shadow:
+    //     0 0 8px rgba(0, 0, 0, 0.1),
+    //     /* Мягкая тень */
+    //     0 0 20px rgba(0, 0, 0, 0.05);
+    /* Размытая тень для объема */
+    box-sizing: border-box;
+    /* Учет padding в общей ширине */
+    /* Для позиционирования внутренних элементов */
+    overflow: hidden;
+    /* Обрезка выходящего за границы контента */
+    box-sizing: border-box;
+    /* Важно! */
+}
+
+
+// @media print {
+//     .resume {
+//         padding: 0;
+//         box-shadow: none;
+//     }
+// }
+
+.shrinked {
+    width: 199px;
+    height: 281px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* Важно! */
+    font-size: 7px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.heading_information {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact {
+    display: flex;
+    gap: 2px;
+}
+
+.profilePhotoClassic {
+    width: 150px;
+}
+
+.profilePhotoShrinked {
+    width: 50px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.professionalPathWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.achievementItem {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.circle {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: black;
+}
+
+.resumeContent {
+    position: relative;
+}
+
+.achievementsWrap {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.educationBlock {
+    display: flex;
+    gap: 24px;
+}
+
+.exucationBlockText {
+    display: flex;
+    flex-direction: column;
+}
