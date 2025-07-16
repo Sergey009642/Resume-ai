@@ -6,19 +6,19 @@
 const educationConfig = [
     {
         value: "bachelor",
-        label: "Бакалавр"
+        label: "Bachelor"
     },
     {
         value: "master",
-        label: "Магистр"
+        label: "Master"
     },
     {
         value: "specialist",
-        label: "Специалист"
+        label: "Specialist "
     },
     {
         value: "doctor",
-        label: "Доктор наук"
+        label: "Doctor of Sciences"
     },
 ]
 

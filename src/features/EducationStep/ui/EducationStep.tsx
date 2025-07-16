@@ -11,19 +11,19 @@ import { ResumeData } from "@entities/resumes/ResumeTemplate1/api/types";
 export const selectOption = [
   {
     value: "bachelor",
-    label: "Бакалавриат",
+    label: "Bachelor",
   },
   {
     value: "master",
-    label: "Магистратура",
+    label: "Master",
   },
   {
     value: "specialist",
-    label: "Специалитет",
+    label: "Specialist",
   },
   {
     value: "doctor",
-    label: "Доктор наук",
+    label: "Doctor of Sciences",
   },
 ];
 

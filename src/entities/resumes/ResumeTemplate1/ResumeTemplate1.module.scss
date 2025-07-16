@@ -8,8 +8,11 @@
 
 .resume {
     width: 620px;
-    background: white;
+    margin-top: 10px;
+    background: linear-gradient(to right, #313131 0%, #313131 30%, white 30%, white 100%);
     box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 
@@ -37,7 +40,8 @@
 .heading_information {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+    width: 70%;
 }
 
 .contact {
@@ -46,25 +50,185 @@
 }
 
 .profilePhotoClassic {
-    width: 96px;
-    height: 96px;
-    border-radius: 16px;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    box-shadow: 0 0 0 2px #fff, 0 0 6px rgba(0, 0, 0, .2);
+}
+
+.profilePhotoClassic img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     image-rendering: auto;
-    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: bicubic;
 }
 
 .imtext {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 60px;
     align-items: center;
-    gap: 32px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .imgText {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+
+    .name {
+        font-size: 34px;
+        font-weight: bold;
+        color: #242424;
+    }
+
+    .role {
+        color: gray;
+        font-weight: bold;
+    }
+}
+
+.infoName {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    gap: 75px;
+    color: #c5c5c5;
+}
+
+.edName {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    gap: 80px;
+    color: #c5c5c5;
+}
+
+.loName {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    gap: 92px;
+    color: #c5c5c5;
+}
+
+.abName {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    gap: 87px;
+    color: #c5c5c5;
+}
+
+.skName {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    gap: 123px;
+    color: #c5c5c5;
+}
+
+.cnName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    color: #c5c5c5;
+}
+
+.psName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 123px;
+    color: #c5c5c5;
+}
+
+.dcName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 96px;
+    color: #c5c5c5;
+}
+
+.esName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 37px;
+    color: #c5c5c5;
+}
+
+.boldEnd {
+    color: #c5c5c5;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.respName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 63px;
+    color: #c5c5c5;
+}
+
+.achivName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 76px;
+    color: #c5c5c5;
+}
+
+.eyName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 130px;
+    color: #c5c5c5;
+}
+
+.inName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 62px;
+    color: #c5c5c5;
+}
+
+.leName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+    color: #c5c5c5;
+}
+
+.faName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 134px;
+    color: #c5c5c5;
+}
+
+.spName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 121px;
+    color: #c5c5c5;
+}
+
+.achievements {
+    display: flex;
+    gap: 4px;
+}
+
+.achivLi {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.work {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 .profilePhotoShrinked {
@@ -80,14 +244,13 @@
 }
 
 
-.role {
-    color: #7C3AED;
-    font-weight: bold;
-}
+
 
 .professionalPathWrap {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .skills {
@@ -104,21 +267,22 @@
 
 .experience {
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     gap: 8px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 16px
 }
 
 .mainInfo {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
     gap: 8px;
 }
 
-.achievements {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
 
 .achievementItem {
     display: flex;
@@ -137,19 +301,10 @@
     position: relative;
 }
 
-.achievementsWrap {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
 
 .educationBlock {
     display: flex;
-    gap: 24px;
-}
-
-.exucationBlockText {
-    display: flex;
     flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
 }

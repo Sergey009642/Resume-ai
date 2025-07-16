@@ -19,37 +19,47 @@ function ProfessionalPath({
 }: ProfessionalPathProps) {
     return (
         <div className={cls.professionalPathWrap}>
-            <span className={classNames(cls.bold)} contentEditable={allowEditing}>{name}</span>
-            <span className={classNames(cls.bold)} contentEditable={allowEditing}>{role}</span>
-
-            <span contentEditable={allowEditing}>{description}</span>
-            <div>
-                <span contentEditable={allowEditing}>{dayjs(startWork).isValid() ? startWork : 'укажите дату'}  </span>
+            <div className={cls.cnName}>
+                <span className={cls.bold}>Company Name:</span>
+                <span className={classNames(cls.notbold)} contentEditable={allowEditing}>{name}</span>
+            </div>
+            <div className={cls.psName}>
+                <span className={cls.bold}>Position:</span>
+                <span className={classNames(cls.notbold)} contentEditable={allowEditing}>{role}</span>
+            </div>
+            <div className={cls.dcName}>
+                <span className={cls.bold}>Description:</span>
+                <span contentEditable={allowEditing} className={cls.notbold}>{description}</span>
+            </div>
+            <div className={cls.esName}>
+                <span className={cls.boldEnd}>End Date - Start Date</span>
+                <div>
+                <span contentEditable={allowEditing} className={cls.notbold}>{dayjs(startWork).isValid() ? startWork : 'Start Date'}  </span>
                 {" "}
                 {"-"}
                 {" "}
-                <span contentEditable={allowEditing}>{dayjs(endWork).isValid() || endWork === "настоящее время" ? endWork : 'укажите дату'}</span>
+                <span contentEditable={allowEditing} className={cls.notbold}>{dayjs(endWork).isValid() || endWork === "настоящее время" ? endWork : 'End Date'}</span>
+                </div>
             </div>
 
-              <div className={cls.achievementsWrap}>
-            <span className={cls.bold}>Обязанности:</span>
-             <ul className={cls.achievements}>
-                {responsibilities.map((achievement) => (
-                        <li contentEditable={allowEditing}>{achievement}</li>
-                    // TODO: add achievement
-                ))}
-            </ul>
-           </div>
-
-           <div className={cls.achievementsWrap}>
-            <span className={cls.bold}>Достижения:</span>
-             <ul className={cls.achievements}>
-                {achievements.map((achievement) => (
-                        <li contentEditable={allowEditing}>{achievement}</li>
-                    // TODO: add achievement
-                ))}
-            </ul>
-           </div>
+            <div className={cls.respName}>
+                <span className={cls.bold}>Responsibilities:</span>
+                <ul className={cls.achievements}>
+                    {responsibilities.map((achievement) => (
+                        <li className={cls.achivLi} contentEditable={allowEditing}>{achievement}</li>
+                        // TODO: add achievement
+                    ))}
+                </ul>
+            </div>
+            <div className={cls.achivName}>
+                <span className={cls.bold}>Achievements:</span>
+                <ul className={cls.achievements}>
+                    {achievements.map((achievement) => (
+                        <li className={cls.achivLi} contentEditable={allowEditing}>{achievement}</li>
+                        // TODO: add achievement
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }

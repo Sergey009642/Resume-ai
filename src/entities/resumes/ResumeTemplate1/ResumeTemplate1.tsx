@@ -41,7 +41,7 @@ const ResumeTemplate1 = React.forwardRef<HTMLDivElement, ResumeTemplate1Props>((
 
       return () => URL.revokeObjectURL(url);
     } else {
-      setPhotoUrl(''); 
+      setPhotoUrl('');
     }
   }, [photo]);
 
@@ -55,34 +55,28 @@ const ResumeTemplate1 = React.forwardRef<HTMLDivElement, ResumeTemplate1Props>((
       }} className={cls.resumeContent}>
         <div className={cls.heading}>
           <div className={cls.heading_information}>
-             <div className={cls.imtext}>
-            <img src={photoUrl} className={classNames({
-              [cls.profilePhotoClassic]: !isShrinked,
-              [cls.profilePhotoShrinked]: isShrinked,
-            })} />
-            <div className={cls.imgText}>
-            <span contentEditable={allowEditing} className={cls.bold}>{name}</span>
-            <span contentEditable={allowEditing} className={cls.role}>{role}</span>
+            <div className={cls.imtext}>
+              <img src={photoUrl} className={classNames({
+                [cls.profilePhotoClassic]: !isShrinked,
+                [cls.profilePhotoShrinked]: isShrinked,
+              })} />
+              <div className={cls.imgText}>
+                <span contentEditable={allowEditing} className={cls.name}>{name}</span>
+                <span contentEditable={allowEditing} className={cls.role}>{role}</span>
+                <span contentEditable={allowEditing} className={cls.notbold}>{email}</span>
+              </div>
             </div>
-          </div>
-           <div>
+            <div className={cls.infoName}>
               <span className={cls.bold}>Experience:</span>
-              {" "}
               <span contentEditable={allowEditing} className={cls.notbold}>{experience}</span>
             </div>
 
-            <div>
+            <div className={cls.edName}>
               <span contentEditable={allowEditing} className={cls.bold}>Education:</span>
-              {" "}
               <span className={cls.notbold}>{education}</span>
             </div>
-
-            <div className={cls.contact}>
-              <span contentEditable={allowEditing} className={cls.notbold}>{email}</span>
-            </div>
-
-            <div>
-              <span className={cls.bold}>Location: {""}</span>
+            <div className={cls.loName}>
+              <span className={cls.bold}>Location:</span>
               <span contentEditable={allowEditing} className={cls.notbold}>{location}</span>
             </div>
           </div>
@@ -90,38 +84,34 @@ const ResumeTemplate1 = React.forwardRef<HTMLDivElement, ResumeTemplate1Props>((
 
         <div className={cls.mainInfo}>
           {summary?.length ? (
-            <div className={cls.summary}>
-            <span className={cls.bold}>Personal Information</span>
-
-            <span contentEditable={allowEditing} className={cls.notbold}>{summary}</span>
-          </div>
+            <div className={cls.abName}>
+              <span className={cls.bold}>About Me:</span>
+              <span contentEditable={allowEditing} className={cls.notbold}>{summary}</span>
+            </div>
           ) : null}
 
           {skills?.length ? (
-            <div className={cls.skills}>
-              <span className={cls.bold}>Skills</span>
-
+            <div className={cls.skName}>
+              <span className={cls.bold}>Skills:</span>
               <span contentEditable={allowEditing} className={cls.notbold}>{(skills || []).map((item) => item).join(", ")}</span>
             </div>
           ) : null}
 
           {professionalPath?.length ? (
             <div className={cls.experience}>
-              <span className={cls.bold}>Work Experience</span>
+              <span className={cls.work}>Work Experience</span>
 
               {professionalPath.map((item) => (
-                <ProfessionalPath  allowEditing={allowEditing} key={item.name} {...item} />
+                <ProfessionalPath allowEditing={allowEditing} key={item.name} {...item} />
               ))}
             </div>
           ) : null}
 
           {educationDetails?.length ? (
             <div className={cls.experience}>
-              <span className={cls.bold}>Responsibilities</span>
-
+              <span className={cls.work}>Education</span>
               {(educationDetails || []).map((item) => (
                 <EducationDetails education={item} key={item.name} allowEditing={!!allowEditing} />
-                // <ProfessionalPath allowEditing={allowEditing} key={item.name} {...item} />
               ))}
             </div>
           ) : null}
