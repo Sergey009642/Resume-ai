@@ -1,0 +1,11 @@
+.mouseAnimation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.glowingSvg {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 255, 0.8));
+    transition: filter 0.3s ease;
+}

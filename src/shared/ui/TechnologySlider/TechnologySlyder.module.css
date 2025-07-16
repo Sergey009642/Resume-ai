@@ -1,0 +1,33 @@
+.animationBlock {
+  width: 100%;
+  background: var(--color_bg_1);
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.animationEl {
+  display: flex;
+  position: relative;
+  height: 100px;
+}
+
+.animationWrap {
+  position: absolute;
+  display: flex;
+  z-index: 500;
+  gap: 64px;
+}
+
+.animationStarting {
+  left: -200vw;
+}
+
+.animationWrapStart {
+  left: -120vw;
+  display: none;
+}
+
+.img {
+  height: 69px;
+}/*# sourceMappingURL=TechnologySlyder.module.css.map */

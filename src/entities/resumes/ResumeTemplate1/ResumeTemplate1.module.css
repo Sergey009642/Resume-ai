@@ -1,0 +1,155 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.resume {
+  width: 620px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.shrinked {
+  width: 199px;
+  height: 281px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  /* Важно! */
+  font-size: 7px;
+}
+
+.heading {
+  display: flex;
+  margin-top: -20px;
+}
+
+.heading_information {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact {
+  display: flex;
+  gap: 2px;
+}
+
+.profilePhotoClassic {
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  image-rendering: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.imtext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.imgText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profilePhotoShrinked {
+  width: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.notbold {
+  color: rgb(116, 114, 114);
+}
+
+.role {
+  color: #7C3AED;
+  font-weight: bold;
+}
+
+.professionalPathWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.achievementItem {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: black;
+}
+
+.resumeContent {
+  position: relative;
+}
+
+.achievementsWrap {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.educationBlock {
+  display: flex;
+  gap: 24px;
+}
+
+.exucationBlockText {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=ResumeTemplate1.module.css.map */

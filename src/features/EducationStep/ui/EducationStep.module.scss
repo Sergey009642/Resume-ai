@@ -1,0 +1,99 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainWrapper {
+  width: 820px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 20px;
+  // background: linear-gradient(to right, rgb(255, 204, 178), rgb(204, 204, 255));
+  background-color: white;
+  box-shadow: 0px 0px 20px 1px gray;
+  max-height: 80vh;
+}
+
+.scrollArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.headText {
+  font-weight: 600;
+  font-size: 27px;
+  color: black;
+}
+
+.subtitleText {
+  font-weight: 400;
+  font-size: 18px;
+  color: gray;
+}
+
+.scrollArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.stepsNext {
+  margin-top: 24px;
+  display: flex;
+  justify-content: end;
+  gap: 6px;
+}
+
+.addWorkExpirience {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.addWorkExpirienceButton {
+  width: 100%;
+}
+
+.educationWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  grid-auto-flow: row;
+  row-gap: 12px;
+}
+
+.elementWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputText {
+  color: gray;
+}
+
+.wholeLine {
+  grid-column: span 2;
+}
+
+.crossButtonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 20px;
+}

@@ -1,0 +1,114 @@
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.ResumeStepperWrap {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  gap: 64px;
+
+  :global {
+    .ant-steps {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+    .ant-steps-item {
+      display: flex;
+    }
+
+    .ant-steps-item-icon {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-weight: bold;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      color: #999;
+
+      transition: all 0.3s ease;
+      margin-bottom: 6px; // distance between number and text
+    }
+
+    .ant-steps-item-process .ant-steps-item-icon {
+      background-color: #e5e7eb49;
+      color: #ffffff;
+      font-size: 18px;
+      border: 2px solid #7C3AED;
+    }
+
+    .ant-steps-item-process .ant-steps-item-title {
+      color: #8000ff;
+    }
+
+    .ant-steps-item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ant-steps-item-title {
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0;
+      text-align: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .ant-steps-item-finish .ant-steps-item-icon {
+      background: linear-gradient(to right, #7c3aed, #c026d3);
+      color: #fff;
+    }
+
+    .ant-steps-item-wait .ant-steps-item-icon {
+      background-color: #e0e0e0;
+      color: #999;
+    }
+
+    .ant-steps-item:not(:last-child)::after {
+      top: 20px;
+      height: 2px;
+      background: #d9d9d9;
+    }
+
+    .ant-steps-item-process::after {
+      background: linear-gradient(to right, #7c3aed, #c026d3);
+    }
+
+    /* ====================
+       Mobile Responsive
+       ==================== */
+    @media (max-width: 768px) {
+      .ant-steps {
+        flex-direction: column !important;
+      }
+
+      .ant-steps-item {
+        margin-bottom: 32px;
+        position: relative;
+      }
+
+      .ant-steps-item::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 40px;
+        background: #7c3aed;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+      }
+
+      .ant-steps-item:last-child::after {
+        display: none;
+      }
+
+      .ant-steps-item-content {
+        margin-top: 4px;
+      }
+    }
+  }
+}

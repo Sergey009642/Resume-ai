@@ -1,0 +1,254 @@
+// Variables
+$primary-purple: #7c3aed;
+$primary-purple-dark: #6d28d9;
+$text-primary: #111827;
+$text-secondary: #6b7280;
+$text-hover: #111827;
+$border-color: #e5e7eb;
+$white: #ffffff;
+$gray-50: #f9fafb;
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin button-base {
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: 2px solid $primary-purple;
+    outline-offset: 2px;
+  }
+}
+
+@mixin gradient-button {
+  @include button-base;
+  background: linear-gradient(135deg, $primary-purple 0%, #8b5cf6 100%);
+  color: $white;
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    background: linear-gradient(135deg, $primary-purple-dark 0%, $primary-purple 100%);
+    box-shadow: $shadow-md;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// Header Styles
+.root {
+  background: $white;
+  box-shadow: $shadow-sm;
+  border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 640px) {
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 2rem;
+  }
+}
+
+.content {
+  @include flex-center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  @include flex-center;
+  gap: 8px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.navPar {
+  display: flex;
+  gap: 60px;
+}
+
+.logoSvg {
+  width: 42px;
+  height: 42px;
+  color: $white;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #7C3AED, #C026D3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.logoText:hover{
+   background: linear-gradient(to right, #60006d, #300083);
+     -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav {
+  @include flex-center;
+  gap: 2rem;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: $text-secondary;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 8px 0;
+  position: relative;
+
+  &:hover {
+    color: $text-hover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #7C3AED, #C026D3);
+    transition: width 0.2s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.cta {
+  @include flex-center;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.ctaButton {
+  @include gradient-button;
+  background: linear-gradient(to right, #7C3AED, #C026D3);
+  padding: 10px 24px;
+  font-size: 0.875rem;
+}
+
+.mobileToggle {
+  display: block;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileButton {
+  color: $text-secondary;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $text-hover;
+    background: $gray-50;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-purple;
+    outline-offset: 2px;
+  }
+}
+
+.mobileIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileMenu {
+  padding: 1rem 0;
+  border-top: 1px solid $border-color;
+  display: block;
+  animation: slideDown 0.2s ease-out;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileLink {
+  color: $text-secondary;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $text-hover;
+  }
+}
+
+.mobileCta {
+  @include gradient-button;
+  padding: 8px 24px;
+  font-size: 0.875rem;
+  text-align: left;
+  margin-top: 8px;
+}
+
+// Animation for mobile menu
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

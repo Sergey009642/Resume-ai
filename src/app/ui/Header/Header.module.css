@@ -1,0 +1,247 @@
+.root {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.logo:hover {
+  opacity: 0.9;
+}
+
+.navPar {
+  display: flex;
+  gap: 60px;
+}
+
+.logoSvg {
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #7C3AED, #C026D3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.logoText:hover {
+  background: linear-gradient(to right, #60006d, #300083);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  display: none;
+}
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: #6b7280;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 8px 0;
+  position: relative;
+}
+.navLink:hover {
+  color: #111827;
+}
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #7C3AED, #C026D3);
+  transition: width 0.2s ease;
+}
+.navLink:hover::after {
+  width: 100%;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+@media (min-width: 768px) {
+  .cta {
+    display: flex;
+  }
+}
+
+.ctaButton {
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to right, #7C3AED, #C026D3);
+  padding: 10px 24px;
+  font-size: 0.875rem;
+}
+.ctaButton:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+.ctaButton:hover {
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: scale(1.02);
+}
+.ctaButton:active {
+  transform: scale(0.98);
+}
+
+.mobileToggle {
+  display: block;
+}
+@media (min-width: 768px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+.mobileButton {
+  color: #6b7280;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.mobileButton:hover {
+  color: #111827;
+  background: #f9fafb;
+}
+.mobileButton:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+
+.mobileIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileMenu {
+  padding: 1rem 0;
+  border-top: 1px solid #e5e7eb;
+  display: block;
+  animation: slideDown 0.2s ease-out;
+}
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileLink {
+  color: #6b7280;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+.mobileLink:hover {
+  color: #111827;
+}
+
+.mobileCta {
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 8px 24px;
+  font-size: 0.875rem;
+  text-align: left;
+  margin-top: 8px;
+}
+.mobileCta:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+.mobileCta:hover {
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: scale(1.02);
+}
+.mobileCta:active {
+  transform: scale(0.98);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=Header.module.css.map */

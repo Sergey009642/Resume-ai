@@ -1,0 +1,168 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.resumeStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+
+  @media screen and (max-width: 552px) {
+    width: 90vw;
+    // overflow: auto;
+  }
+}
+
+.hideToolbar {
+  width: 100%;
+  height: 80vh;
+  padding: 20px;
+
+  @media screen and (max-width: 552px) {
+    height: 33vh;
+  }
+}
+
+.resume {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transform: translate(-80px);
+  cursor: pointer;
+  margin-top: 40px;
+  color: gray;
+}
+
+.resumeToolbar {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.containter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+.resumePageBreak {
+  padding: 20px;
+  width: 100%;
+
+  box-shadow:
+    0 0 8px rgba(0, 0, 0, 0.1),
+    /* Мягкая тень */
+    0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.resumeWrap {
+  // overflow: auto;
+  // height: inherit;
+  height: 100%;
+  overflow: auto;
+  // flex-direction: column;
+  // display: flex;
+  // justify-content: center;
+  gap: 16px;
+
+}
+
+.spacer {
+  margin-bottom: 24px;
+}
+
+/* В вашем CSS-файле (например, ResumeContainer.module.css) */
+@media print {
+  .shadowResume {
+    display: none;
+  }
+
+  .hideToolbar {
+    display: none;
+    visibility: hidden;
+  }
+
+  .containter {
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin-top: 10px;
+    height: 100vh;
+    top: 10px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: block;
+    /* flex может мешать */
+    overflow: visible;
+    background: white;
+    margin: 0 auto;
+    z-index: 5;
+  }
+
+  .resumeWrap {
+    height: auto;
+    display: block;
+    overflow: inherit;
+    /* flex может мешать */
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .resumePageBreak {
+    page-break-after: always;
+    break-after: page;
+    /* Современный аналог */
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .resumeToolbar {
+    display: none;
+  }
+
+  body,
+  html {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+  }
+}
+
+.shadowResume {
+  position: fixed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.resumeSpliter {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+}

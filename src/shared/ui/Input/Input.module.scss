@@ -1,0 +1,29 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid var(--color_brand_1);
+    outline: none;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.inputError {
+    border-bottom: 1px solid red;
+}
+
+.messageText {
+    position: absolute;
+    bottom: -23px;
+    color: red;
+}

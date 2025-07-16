@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media screen and (max-width: 552px) {
+  .wrapper {
+    width: 85vw;
+  }
+}/*# sourceMappingURL=ToolBar.module.css.map */
